@@ -3,15 +3,15 @@ const closeBtn = document.getElementById("closeModal");
 const modal = document.getElementById("modal");
 
 openBtn.addEventListener("click", () => {
-  modal.style.display = "flex";
+  modal.classList.add("show");
 });
 
 closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
+  modal.classList.remove("show");
 });
 
 window.addEventListener("click", (e) => {
   if (e.target === modal) {
-    modal.style.display = "none";
+    modal.classList.remove("show");
   }
 });
