@@ -1,19 +1,17 @@
-//your JS code here. If required.
 const openBtn = document.getElementById("openModal");
-const modal = document.getElementById("modal");
 const closeBtn = document.getElementById("closeModal");
-const modalContent = document.querySelector(".modal-content");
+const modal = document.getElementById("modal");
 
-openBtn.onclick = () => {
-	modal.style.display = "block";
-};
+openBtn.addEventListener("click", () => {
+  modal.style.display = "flex";
+});
 
-closeBtn.onclick = () => {
-	modal.style.display = "none";
-};
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
 
-window.onclick = (event) => {
-	if(event.target === modal){
-		modal.style.display = "none";
-	}
-};
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
